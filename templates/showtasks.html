@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+      {%for task in tasks%}
+      {{task.name}}
+       </br>
+       </br>
+      {{task.date}}
+       </br></br>
+       {%if task.added=='False'%}
+       <a href="{{url_for('addTaskToAllStudents',taskID=task.id)}}">Add Task To All Students</a>
+       {%endif%}
+       <a href="{{url_for('deleteTaskToAllStudents', taskID=task.id)}}">Delete for All Students</a>
+       <a href="{{url_for('deleteTask', taskID=task.id)}}"><button>Delete</button></a>
+       </br></br>
+      {%endfor%}
+      <a href="{{url_for('addTask')}}"><button>Add Task</button></a>
+      </br></br>
+      <a href="{{url_for('welcomeUser')}}">Back to Admin Page</a>
+</body>
+</html>

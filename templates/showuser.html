@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+      
+       <h2>{{user.name}}</h2>
+       </br></br>
+       <label>ID:</label>
+       {{user.id}}
+       </br></br>
+       <label>Email:</label>
+       {{user.email}}
+       </br></br>
+       <label>User Role:</label>
+       {{user.role}}
+       </br></br>
+       <label>Mentor's ID:</label>
+       {{user.mentor_id}}
+       </br></br>
+    <a href="{{url_for('editUser', userID=user.id)}}"><button>Edit</button></a> 
+    <a href="{{url_for('deleteUser', userID=user.id)}}"><button>Delete</button></a>
+    <a href="{{url_for('showUsers')}}">Back to All Users</a>
+</body>
+</html>

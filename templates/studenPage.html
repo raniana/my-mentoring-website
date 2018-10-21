@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Progress Page</title>
+</head>
+<body>
+	<h1>صفحةالمتابعة</h1>
+	<h2>جدول الاسبوع</h2>
+	{%for studentTask in studentTasks%}
+	  <li>{{studentTask.name}}</li>
+	  <li>{{studentTask.status}}</li>
+	{%endfor%}  
+	
+	
+	<h2>Mentor Information:</h2>
+	<label>NAME:</label>
+	{{mentor.name}}
+   </br>
+	<label>Email:</label>
+	{{mentor.email}}
+	</br>
+	<label>Phone no:</label>
+	{{mentor.phone}}
+	</br>
+	<a href="{{url_for('gdisconnect')}}"><button>log out</button></a>
+
+</body>
+</html>

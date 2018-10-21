@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+       <h3>Edit User "{{user.name}}"</h3>
+       <form action="{{url_for('editUser',userID=user.id)}}" method="post">
+       	<label>Role:          </label>
+       	<input type="text" maxlength="30" name="role" placeholder="{{user.role}}">
+       </br>
+       </br>
+       	<label>Mentor's ID:</label>
+       	<input type="text" maxlength="50" name="id">
+       </br>
+       </br>
+       <label>Phone:</label>
+       <input type="text" maxlength="50" name="phone">
+       	<button type="submit">Submit</button>
+       	</br></br>
+       	<a href="{{url_for('showUser', userID=user.id)}}"><button>cancel</button></a>
+       </form>
+
+</body>
+</html>

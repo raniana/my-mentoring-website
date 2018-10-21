@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+      
+      {%for task in tasks%}
+                 
+                 {{task.name}}
+                  </br></br>
+                  {{task.status}} 
+                   </br></br>
+                   <a href="{{url_for('markAsDone',studentTaskID=task.id,studentID=studentID,mentorID=mentorID)}}"><button>Mark As Done</button></a>
+      {%endfor%}             
+  </body>
+</html>

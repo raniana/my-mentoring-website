@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	   <form action="{{url_for('deleteUser', userID=user.id)}}" method="post">
+       <h2>Are you sure you want to delete{{user.name}}</h2>
+       <button type="submit">Delete</button>
+       </form>
+       <a href="{{url_for('showUser', userID=user.id)}}"><button>cancel</button></a>
+</body>
+</html>
