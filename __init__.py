@@ -22,7 +22,7 @@ CLIENT_ID = json.loads(
 Application_NAME = "sudanMentors"
 
 #connect to the database and create a dtabase session
-engine = create_engine('postgresql://sudament:sudament@52.15.210.121/sudamendb?check_same_thread=False')
+engine = create_engine('postgresql://sudament:sudoku@52.15.210.121/sudamendb?check_same_thread=False')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
