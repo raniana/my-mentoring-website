@@ -47,5 +47,5 @@ class StudentTask(Base):
     
                        
                             
-engine = create_engine('postgresql://sudament:sudoku@52.15.210.121/sudamendb')
+engine = create_engine('postgresql://postgres:postgres@172.26.1.1641/sudamentdb')
 Base.metadata.create_all(engine)
